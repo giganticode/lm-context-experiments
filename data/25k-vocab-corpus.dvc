@@ -1,0 +1,7 @@
+md5: 92c7326c5d9db0cd8e3937a8c7a7dce4
+outs:
+- md5: ca2e8d6be677c14bd408fca1ad2c08cc.dir
+  path: 25k-vocab-corpus
+  cache: true
+  metric: false
+  persist: false

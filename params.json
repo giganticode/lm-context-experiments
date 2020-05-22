@@ -1,0 +1,57 @@
+{
+  "arch": {
+    "bidir": false,
+    "drop": {
+      "multiplier": 1.0,
+      "out": 0.4,
+      "oute": 0.1,
+      "outh": 0.3,
+      "outi": 0.65,
+      "w": 0.5
+    },
+    "emb_sz": 400,
+    "n_hid": 1150,
+    "n_layers": 3,
+    "name": "lstm",
+    "out_bias": true,
+    "tie_weights": true
+  },
+  "base_model": null,
+  "bptt": 70,
+  "bs": 32,
+  "corpus": {
+    "extensions": "java",
+    "path": "/path/to/dataset"
+  },
+  "prep_function": {
+    "callable": "nosplit",
+    "params": [],
+    "options": {
+      "no_com": true,
+      "no_spaces": true,
+      "no_str": true,
+      "no_unicode": true
+    }
+  },
+  "training": {
+    "activation_regularization": {
+      "alpha": 2,
+      "beta": 1
+    },
+    "gradient_clip": 0.3,
+    "optimizer": {
+      "momentum": 0.0,
+      "name": "sgd"
+    },
+    "schedule": {
+      "init_lr": 30.0,
+      "max_epochs": 50,
+      "max_lr_reduction_times": 6,
+      "mult_coeff": 0.5,
+      "name": "rafael",
+      "patience": 1
+    },
+    "sub_epochs": null,
+    "weight_decay": 1.2e-06
+  }
+}
