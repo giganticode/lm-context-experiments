@@ -24,8 +24,8 @@
     "path": "/path/to/dataset"
   },
   "prep_function": {
-    "callable": "nosplit",
-    "params": [],
+    "callable": "bpe",
+    "params": ["10k"],
     "options": {
       "no_com": true,
       "no_spaces": true,

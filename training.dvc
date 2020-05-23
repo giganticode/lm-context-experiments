@@ -1,4 +1,4 @@
-md5: b3b47bace60cf0b3d619c81723a9fadb
+md5: 886efd328f2fa5c3da6e9294fa2ad4a4
 cmd: virtualenv .venv && source .venv/bin/activate && LANGMODELS_COMMIT_HASH=$(<langmodels-commit-hash.txt)
   && pip install -r https://raw.githubusercontent.com/giganticode/langmodels/$LANGMODELS_COMMIT_HASH/requirements.txt
   && pip install git+https://github.com/giganticode/langmodels@$LANGMODELS_COMMIT_HASH
@@ -7,22 +7,22 @@ cmd: virtualenv .venv && source .venv/bin/activate && LANGMODELS_COMMIT_HASH=$(<
 deps:
 - md5: ca2e8d6be677c14bd408fca1ad2c08cc.dir
   path: data/25k-vocab-corpus
-- md5: df0d8cbc36bbf57828ed82c4dc123611
+- md5: 8919fa553684a73e59e451113b8f529c
   path: langmodels-commit-hash.txt
-- md5: 3921bf85a1abd0c2e3e32655e10c03b5
+- md5: fc5564400c285d41255434aca2847294
   path: params.json
 outs:
-- md5: 8c1e97eb4eff53cadd1960416046edeb
+- md5: 0dd5ba59e68be67a63f3c027ad1e143a
   path: output/best.pth
   cache: true
   metric: false
   persist: false
-- md5: b2039f6ade8ad4bdcd7bdcc2ec8c2565
+- md5: 09c4fcaa47fcdaf105018f772276d187
   path: output/training_metrics.csv
   cache: false
   metric: false
   persist: false
-- md5: b797ff4b61494e8f1ec04140e44d6f11
+- md5: 30d2f1a229f5ed538477afa85d1bc0c2
   path: output/vocab
   cache: true
   metric: false
