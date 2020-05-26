@@ -1,0 +1,24 @@
+md5: e438d944dac2d7b37287a6d4658cec45
+cmd: scripts/run-fuzzy-sharp-code.sh $(<lm-context-analysis-commit-hash.txt) $(pwd)/data/25k-vocab-corpus
+  "$(scripts/json-to-cmd-params.py one-level-params.json)" $(pwd)/fuzzy-sharp-output/best.pt
+  $(pwd)/fuzzy-sharp-output/metrics.csv
+deps:
+- md5: facb4bdfc6044971710c5965a8fc41e6
+  path: scripts/run-fuzzy-sharp-code.sh
+- md5: 1d2b9ec2a108789287c56a6374717618
+  path: scripts/json-to-cmd-params.py
+- md5: 23c6964deda4f918bab168e8fced96a0
+  path: lm-context-analysis-commit-hash.txt
+- md5: 40d4cd0fd5ef6fcde4b99eb2d51de50f
+  path: one-level-params.json
+outs:
+- md5: c65f5fad55e856ab5f66e420db0024b4
+  path: fuzzy-sharp-output/metrics.csv
+  cache: false
+  metric: true
+  persist: false
+- md5: 05642c15c922048aec32b099564d7a49
+  path: fuzzy-sharp-output/best.pt
+  cache: true
+  metric: false
+  persist: false

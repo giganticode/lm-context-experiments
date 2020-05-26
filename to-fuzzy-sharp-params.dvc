@@ -1,0 +1,13 @@
+md5: cc354729c8a07407fbf7583ce0de1e41
+cmd: jq "$(<script-data/to-fuzzy-sharp-config.jq)" config.json > one-level-params.json
+deps:
+- md5: 184a099d77aacbf406ba803a372ad055
+  path: config.json
+- md5: 3825af7e45f80d0f050b6f7a0f1f5313
+  path: script-data/to-fuzzy-sharp-config.jq
+outs:
+- md5: 40d4cd0fd5ef6fcde4b99eb2d51de50f
+  path: one-level-params.json
+  cache: false
+  metric: false
+  persist: false
